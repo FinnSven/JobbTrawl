@@ -2,7 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
+  const handleScrapeJobs = async () => {
+    const response = await fetch('http://localhost:3000/scrape');
+    const data = await response.json();
+    console.log("scraping jobs for search results");
+  };
+   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
